@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerAI - Intelligent Career Recommendation System</title>
+    <meta name="description" content="AI-Powered Career Recommendation System featuring Machine Learning prediction, Skill Gap Analysis, EDA Analytics, and personalized career roadmaps.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>Career<span>AI</span></h1>
+                    <span class="brand-tag">Intelligent Recommendation & Skill Trajectory System</span>
+                </div>
+            </div>
+
+            <!-- Main Nav Tabs -->
+            <nav class="nav-tabs" role="tablist">
+                <button class="nav-tab-btn active" data-tab="tab-predict" id="nav-predict-tab" role="tab" aria-selected="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                    <span>Career Predictor</span>
+                </button>
+                <button class="nav-tab-btn" data-tab="tab-analytics" id="nav-analytics-tab" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>EDA Analytics</span>
+                </button>
+                <button class="nav-tab-btn" data-tab="tab-model" id="nav-model-tab" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg>
+                    <span>ML Architecture</span>
+                </button>
+                <button class="nav-tab-btn" data-tab="tab-catalog" id="nav-catalog-tab" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <span>Career Catalog</span>
+                </button>
+                <button class="nav-tab-btn" data-tab="tab-dataset" id="nav-dataset-tab" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Dataset Explorer</span>
+                </button>
+            </nav>
+
+            <!-- Right Controls: Theme Toggle & Status Badge -->
+            <div class="header-actions">
+                <div class="status-indicator" title="Model trained on Random Forest + MultiLabel Binarizer">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Pipeline Active</span>
+                </div>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="main-content">
+        <!-- ========================================== -->
+        <!-- TAB 1: CAREER PREDICTOR & RECOMMENDER     -->
+        <!-- ========================================== -->
+        <section class="tab-pane active" id="tab-predict">
+            <!-- Quick Test Profiles Pill Bar -->
+            <div class="quick-samples-bar">
+                <div class="samples-label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>Quick Test Profiles:</span>
+                </div>
+                <div class="samples-pill-list" id="samples-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+            <!-- Predictor Split Grid -->
+            <div class="predictor-grid">
+                <!-- LEFT COLUMN: Profile Form -->
+                <div class="form-card glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <span class="card-step">1</span>
+                            <h2>Candidate Profile Setup</h2>
+                        </div>
+                        <button type="button" class="btn-text" id="toggle-resume-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            <span>Paste Bio / Resume</span>
+                        </button>
+                    </div>
+
+                    <!-- Collapsible Resume Parser Drawer -->
+                    <div class="resume-drawer" id="resume-drawer" style="display: none;">
+                        <div class="drawer-inner">
+                            <label for="resume-input">Paste resume, LinkedIn summary, or bio to auto-detect skills:</label>
+                            <textarea id="resume-input" rows="3" placeholder="e.g. Experienced software engineer skilled in Python, Machine Learning, Docker, SQL and data analysis with an interest in AI and technology..."></textarea>
+                            <div class="drawer-actions">
+                                <button type="button" class="btn-secondary" id="btn-extract-skills">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                    <span>Extract Skills & Auto-Fill</span>
+                                </button>
+                                <span class="extraction-msg" id="extraction-msg"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="prediction-form" class="profile-form">
+                        <!-- Candidate Name & Age Row -->
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="candidate-name">Candidate Name</label>
+                                <input type="text" id="candidate-name" placeholder="e.g. John Doe" value="Alex Chen">
+                            </div>
+                            <div class="form-group">
+                                <div class="label-with-value">
+                                    <label for="candidate-age">Age</label>
+                                    <span class="slider-badge" id="age-val-badge">28 yrs</span>
+                                </div>
+                                <div class="range-wrapper">
+                                    <input type="range" id="candidate-age" min="18" max="65" value="28">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Level Selector -->
+                        <div class="form-group">
+                            <label>Education Level</label>
+                            <div class="education-options">
+                                <label class="edu-card">
+                                    <input type="radio" name="education" value="Bachelor's" checked>
+                                    <div class="edu-card-content">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                                        <span class="edu-name">Bachelor's</span>
+                                    </div>
+                                </label>
+                                <label class="edu-card">
+                                    <input type="radio" name="education" value="Master's">
+                                    <div class="edu-card-content">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                        <span class="edu-name">Master's</span>
+                                    </div>
+                                </label>
+                                <label class="edu-card">
+                                    <input type="radio" name="education" value="PhD">
+                                    <div class="edu-card-content">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                        <span class="edu-name">Doctorate (PhD)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Skills Selection Section -->
+                        <div class="form-group">
+                            <div class="label-with-value">
+                                <label>Technical & Domain Skills</label>
+                                <span class="counter-badge" id="skills-count-badge">0 selected</span>
+                            </div>
+
+                            <!-- Category Filter Chips -->
+                            <div class="category-filter-chips" id="skill-category-filters">
+                                <button type="button" class="filter-chip active" data-cat="all">All</button>
+                                <button type="button" class="filter-chip" data-cat="AI, ML & Data">AI & Data</button>
+                                <button type="button" class="filter-chip" data-cat="Software Engineering">Software</button>
+                                <button type="button" class="filter-chip" data-cat="Cloud & Infrastructure">Cloud & DevOps</button>
+                                <button type="button" class="filter-chip" data-cat="Design & Creative">Design</button>
+                                <button type="button" class="filter-chip" data-cat="Marketing & Content">Marketing</button>
+                                <button type="button" class="filter-chip" data-cat="Business & Management">Business</button>
+                            </div>
+
+                            <!-- Search bar for skills -->
+                            <div class="search-input-wrapper">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <input type="text" id="skill-search" placeholder="Search or filter skills (e.g. Python, SQL, React)...">
+                            </div>
+
+                            <!-- Clickable Skill Tags Cloud -->
+                            <div class="tags-cloud-box" id="skills-tags-cloud">
+                                <!-- Populated dynamically -->
+                            </div>
+
+                            <!-- Custom Skill Input -->
+                            <div class="custom-tag-row">
+                                <input type="text" id="custom-skill-input" placeholder="Type custom skill and press Enter...">
+                                <button type="button" id="btn-add-custom-skill" class="btn-secondary small">Add</button>
+                            </div>
+                        </div>
+
+                        <!-- Interests Selection Section -->
+                        <div class="form-group">
+                            <div class="label-with-value">
+                                <label>Professional Interests</label>
+                                <span class="counter-badge" id="interests-count-badge">0 selected</span>
+                            </div>
+                            <div class="tags-cloud-box compact" id="interests-tags-cloud">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary glow-btn" id="btn-predict-submit">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                                <span>Generate AI Recommendation & Skill Gap</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- RIGHT COLUMN: Recommendation Output -->
+                <div class="results-column" id="results-column">
+                    <!-- Initial Welcome / Empty State -->
+                    <div class="empty-state-card glass-panel" id="results-empty-state">
+                        <div class="radar-pulse-graphic">
+                            <div class="pulse-ring ring-1"></div>
+                            <div class="pulse-ring ring-2"></div>
+                            <div class="pulse-ring ring-3"></div>
+                            <div class="center-gem">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                        </div>
+                        <h3>Ready to Discover Your Ideal Career Path</h3>
+                        <p>Configure your candidate profile on the left, or click any of the <strong>Quick Test Profiles</strong> at the top to see AI-powered career matching, match score, and skill gap breakdown in real time.</p>
+                        <div class="features-pill-row">
+                            <span class="feature-tag">✓ Random Forest Classifier</span>
+                            <span class="feature-tag">✓ Skill Gap Detection</span>
+                            <span class="feature-tag">✓ Top 5 Alternatives</span>
+                            <span class="feature-tag">✓ Personalized Roadmap</span>
+                        </div>
+                    </div>
+
+                    <!-- Active Result Card (Hidden until generated) -->
+                    <div class="results-card glass-panel" id="results-active-card" style="display: none;">
+                        <!-- Primary Recommendation Hero Banner -->
+                        <div class="rec-hero-banner">
+                            <div class="hero-left">
+                                <div class="badge-row">
+                                    <span class="role-badge" id="rec-category">AI & Analytics</span>
+                                    <span class="demand-badge" id="rec-demand">🔥 High Demand</span>
+                                </div>
+                                <h1 class="recommended-title" id="rec-career-title">Data Scientist</h1>
+                                <p class="recommended-desc" id="rec-description">Extracts predictive value from complex datasets utilizing statistical modeling, NLP, and machine learning.</p>
+                                <div class="meta-stats-row">
+                                    <div class="meta-stat">
+                                        <span class="stat-lbl">Estimated Salary:</span>
+                                        <span class="stat-val" id="rec-salary">$115,000 - $170,000 / yr</span>
+                                    </div>
+                                    <div class="meta-stat">
+                                        <span class="stat-lbl">Target Candidate:</span>
+                                        <span class="stat-val" id="rec-candidate-name">Alex Chen (Age 28)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Circular Score Gauge -->
+                            <div class="hero-right">
+                                <div class="score-circle-wrapper">
+                                    <svg class="score-svg" viewBox="0 0 120 120">
+                                        <circle class="score-bg-circle" cx="60" cy="60" r="50"></circle>
+                                        <circle class="score-bar-circle" id="score-circle-bar" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="31.4"></circle>
+                                    </svg>
+                                    <div class="score-inner-text">
+                                        <span class="score-number" id="rec-score-pct">94%</span>
+                                        <span class="score-label">Match Score</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Gap Analysis Section -->
+                        <div class="section-card">
+                            <div class="section-title-row">
+                                <div class="title-with-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                                    <h3>Skill Gap Analysis</h3>
+                                </div>
+                                <div class="match-rate-indicator">
+                                    <span>Coverage:</span>
+                                    <strong id="skill-coverage-rate">85%</strong>
+                                </div>
+                            </div>
+
+                            <div class="skill-gap-grid">
+                                <!-- Matched Skills -->
+                                <div class="gap-card matched">
+                                    <div class="gap-card-header">
+                                        <span class="gap-icon check">✓</span>
+                                        <h4>Skills You Possess</h4>
+                                    </div>
+                                    <div class="chip-container" id="matched-skills-chips">
+                                        <!-- Chips inserted via JS -->
+                                    </div>
+                                </div>
+
+                                <!-- Missing Skills -->
+                                <div class="gap-card missing">
+                                    <div class="gap-card-header">
+                                        <span class="gap-icon alert">!</span>
+                                        <h4>Recommended Skills to Learn</h4>
+                                    </div>
+                                    <div class="chip-container" id="missing-skills-chips">
+                                        <!-- Chips inserted via JS -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top 5 Alternative Career Matches -->
+                        <div class="section-card">
+                            <div class="section-title-row">
+                                <div class="title-with-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <h3>Alternative Career Pathways</h3>
+                                </div>
+                                <span class="section-sub">Ranked ML probability fit</span>
+                            </div>
+                            <div class="alternatives-list" id="alternatives-container">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Key Responsibilities & Learning Roadmap Accordion -->
+                        <div class="section-card">
+                            <div class="section-title-row">
+                                <div class="title-with-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                                    <h3>Actionable Career Growth Roadmap</h3>
+                                </div>
+                            </div>
+                            <div class="roadmap-steps" id="roadmap-container">
+                                <!-- Steps inserted via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Action Toolbar -->
+                        <div class="results-actions">
+                            <button type="button" class="btn-secondary" id="btn-print-report">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                                <span>Export Career Report (PDF / Print)</span>
+                            </button>
+                            <button type="button" class="btn-text" id="btn-reset-form">
+                                <span>Reset Inputs</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: DATASET & EDA ANALYTICS DASHBOARD  -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-analytics">
+            <div class="dashboard-header">
+                <h2>Exploratory Data Analysis & Dataset Insights</h2>
+                <p>Interactive visualizations generated from <code>AI-based Career Recommendation System.csv</code> and the Jupyter Notebook pipeline.</p>
+            </div>
+
+            <!-- KPI Metric Stat Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon indigo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Total Candidates</span>
+                        <strong class="kpi-number" id="kpi-candidates">200</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Unique Career Roles</span>
+                        <strong class="kpi-number" id="kpi-careers">32</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon emerald">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Average Candidate Age</span>
+                        <strong class="kpi-number" id="kpi-age">29.8 yrs</strong>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Mean Recommendation Score</span>
+                        <strong class="kpi-number" id="kpi-score">0.90</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+                <!-- Chart 1: Career Distribution -->
+                <div class="chart-card glass-panel full-width">
+                    <div class="chart-header">
+                        <h3>Distribution of Top Recommended Careers</h3>
+                        <span class="chart-sub">Frequency of career roles in the dataset</span>
+                    </div>
+                    <div class="chart-canvas-wrapper tall">
+                        <canvas id="chart-career-dist"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Top Skills -->
+                <div class="chart-card glass-panel">
+                    <div class="chart-header">
+                        <h3>Most In-Demand Candidate Skills</h3>
+                        <span class="chart-sub">Frequency of skill mentions across candidates</span>
+                    </div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="chart-skills-dist"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 3: Education Level Breakdown -->
+                <div class="chart-card glass-panel">
+                    <div class="chart-header">
+                        <h3>Education Level Distribution</h3>
+                        <span class="chart-sub">Proportion of Bachelor's, Master's, and PhD holders</span>
+                    </div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="chart-edu-dist"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 4: Age Groups -->
+                <div class="chart-card glass-panel">
+                    <div class="chart-header">
+                        <h3>Candidate Age Distribution</h3>
+                        <span class="chart-sub">Demographic spread across age brackets</span>
+                    </div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="chart-age-dist"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 5: Top Interests -->
+                <div class="chart-card glass-panel">
+                    <div class="chart-header">
+                        <h3>Top Candidate Interests</h3>
+                        <span class="chart-sub">Primary fields of passion and career interest</span>
+                    </div>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="chart-interests-dist"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: MODEL BENCHMARKS & ARCHITECTURE    -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-model">
+            <div class="dashboard-header">
+                <h2>Machine Learning Pipeline & Evaluation</h2>
+                <p>Architecture, feature engineering, and model validation derived from <code>ai-career-recommendation-eda-ml.ipynb</code>.</p>
+            </div>
+
+            <!-- Accuracy KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon indigo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Top-1 Accuracy</span>
+                        <strong class="kpi-number" id="metric-top1">47.50%</strong>
+                        <span class="kpi-note">Exact 1-of-32 role match</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon cyan">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Top-3 Ranked Accuracy</span>
+                        <strong class="kpi-number" id="metric-top3">55.00%</strong>
+                        <span class="kpi-note">Target in top 3 predictions</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon emerald">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Top-5 Ranked Accuracy</span>
+                        <strong class="kpi-number" id="metric-top5">62.50%</strong>
+                        <span class="kpi-note">Target in top 5 recommendations</span>
+                    </div>
+                </div>
+
+                <div class="kpi-card glass-panel">
+                    <div class="kpi-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    </div>
+                    <div class="kpi-info">
+                        <span class="kpi-label">Model Pipeline</span>
+                        <strong class="kpi-number">Random Forest</strong>
+                        <span class="kpi-note">180 decision trees + GBDT Regressor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Cards -->
+            <div class="model-info-grid">
+                <div class="info-card glass-panel">
+                    <h3>🔬 Feature Engineering Pipeline</h3>
+                    <ul class="pipeline-list">
+                        <li>
+                            <strong>1. Skills & Interests Binarization:</strong>
+                            <p>Parsed semicolon-separated values into discrete multi-hot indicator vectors using <code>MultiLabelBinarizer</code> for 80 unique skills and 38 unique interests.</p>
+                        </li>
+                        <li>
+                            <strong>2. Education Categorical Encoding:</strong>
+                            <p>Transformed ordinal education levels (Bachelor's, Master's, PhD) into integer and one-hot embeddings via <code>LabelEncoder</code>.</p>
+                        </li>
+                        <li>
+                            <strong>3. Age Standardization:</strong>
+                            <p>Normalized candidate age feature distribution with zero mean and unit variance using <code>StandardScaler</code>.</p>
+                        </li>
+                        <li>
+                            <strong>4. Hybrid Ranking Engine:</strong>
+                            <p>Blends supervised Random Forest multi-class posterior probabilities (55%) with Cosine content overlap vectors (45%) to guarantee high relevance even on sparse or novel profiles.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card glass-panel">
+                    <h3>⚡ Notebook vs Production Enhancements</h3>
+                    <div class="comparison-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Jupyter Notebook</th>
+                                    <th>Enhanced Production App</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Text Tokenization</td>
+                                    <td>CountVectorizer string join (had token boundary fusion bug)</td>
+                                    <td>Fixed clean MultiLabelBinarizer separating exact 80 skills</td>
+                                </tr>
+                                <tr>
+                                    <td>Model Architecture</td>
+                                    <td>Basic Random Forest (100 estimators)</td>
+                                    <td>Tuned 180-tree Forest + GBDT Score Regressor</td>
+                                </tr>
+                                <tr>
+                                    <td>Output Format</td>
+                                    <td>Single class label string</td>
+                                    <td>Calibrated Score, Top 5 Alternatives, & Skill Gap Analysis</td>
+                                </tr>
+                                <tr>
+                                    <td>Resume Parsing</td>
+                                    <td>None</td>
+                                    <td>Regex & alias skill extractor with instant autofill</td>
+                                </tr>
+                                <tr>
+                                    <td>User Interface</td>
+                                    <td>None (Static Plots)</td>
+                                    <td>Full-featured Web App & Native Tkinter Desktop GUI</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: CAREER CATALOG DIRECTORY           -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-catalog">
+            <div class="dashboard-header">
+                <h2>Comprehensive Career Directory</h2>
+                <p>Explore all 32 career pathways, essential skills, market demand, and salary benchmarks.</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="catalog-filter-bar">
+                <div class="search-input-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="catalog-search" placeholder="Search career by name or skill (e.g., Python, Marketing, DevOps)...">
+                </div>
+                <div class="catalog-domain-filters" id="catalog-domain-filters">
+                    <button type="button" class="filter-chip active" data-domain="all">All Roles (32)</button>
+                    <button type="button" class="filter-chip" data-domain="Artificial Intelligence">AI & ML</button>
+                    <button type="button" class="filter-chip" data-domain="Data Science">Data & Analytics</button>
+                    <button type="button" class="filter-chip" data-domain="Software Engineering">Software</button>
+                    <button type="button" class="filter-chip" data-domain="Design">Design & UX</button>
+                    <button type="button" class="filter-chip" data-domain="Security">Security</button>
+                    <button type="button" class="filter-chip" data-domain="Marketing">Marketing</button>
+                    <button type="button" class="filter-chip" data-domain="Business">Business</button>
+                </div>
+            </div>
+
+            <!-- Catalog Cards Grid -->
+            <div class="catalog-cards-grid" id="catalog-cards-container">
+                <!-- Cards injected via JS -->
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 5: DATASET EXPLORER                   -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-dataset">
+            <div class="dashboard-header">
+                <h2>Raw Dataset Explorer</h2>
+                <p>Live searchable database of all 200 candidates from <code>AI-based Career Recommendation System.csv</code>. Click any candidate row to load their profile directly into the Predictor!</p>
+            </div>
+
+            <div class="table-controls-bar">
+                <div class="search-input-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="dataset-search-input" placeholder="Search by Candidate Name, Education, Career, or Skills...">
+                </div>
+                <span class="table-count-badge" id="dataset-count-badge">Showing 200 candidates</span>
+            </div>
+
+            <div class="data-table-container glass-panel">
+                <table class="data-table" id="dataset-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Candidate Name</th>
+                            <th>Age</th>
+                            <th>Education</th>
+                            <th>Skills</th>
+                            <th>Interests</th>
+                            <th>Recommended Career</th>
+                            <th>Score</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataset-tbody">
+                        <!-- Populated via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>AI-Based Career Recommendation System • Built with FastAPI, scikit-learn, Chart.js & Vanilla CSS</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

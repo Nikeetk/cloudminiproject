@@ -1,0 +1,1381 @@
+{
+  "all_skills": [
+    ".NET",
+    "AI",
+    "Adobe Creative Suite",
+    "Adobe Illustrator",
+    "Adobe Photoshop",
+    "Adobe XD",
+    "Agile",
+    "Algorithms",
+    "Analytics",
+    "Android",
+    "Automation",
+    "Big Data",
+    "Business Analysis",
+    "C#",
+    "C++",
+    "CRM",
+    "CSS",
+    "Cloud Computing",
+    "Communication",
+    "Content Creation",
+    "Content Strategy",
+    "Content Writing",
+    "Copywriting",
+    "Creativity",
+    "Cybersecurity",
+    "Data Analysis",
+    "Data Mining",
+    "Data Science",
+    "Data Structures",
+    "Data Visualization",
+    "Data Warehousing",
+    "Deep Learning",
+    "DevOps",
+    "Digital Illustration",
+    "Digital Marketing",
+    "ETL",
+    "Econometrics",
+    "Embedded Systems",
+    "Excel",
+    "Financial Analysis",
+    "Graphic Design",
+    "HTML",
+    "Illustration",
+    "Interaction Design",
+    "IoT",
+    "Java",
+    "JavaScript",
+    "Linux",
+    "Machine Learning",
+    "Marketing Strategy",
+    "Microservices",
+    "NLP",
+    "Natural Language Processing",
+    "Negotiation",
+    "Network Security",
+    "Node.js",
+    "Project Management",
+    "Prototyping",
+    "Python",
+    "R",
+    "React",
+    "Research",
+    "Risk Analysis",
+    "SEO",
+    "SQL",
+    "Social Media",
+    "Software Design",
+    "Spring",
+    "Statistical Analysis",
+    "Statistics",
+    "Storytelling",
+    "System Design",
+    "TensorFlow",
+    "UI Design",
+    "UI/UX",
+    "UX",
+    "UX Design",
+    "UX Research",
+    "UX/UI",
+    "User Research"
+  ],
+  "all_interests": [
+    "AI",
+    "Academia",
+    "Analytics",
+    "Arts",
+    "Automation",
+    "Biotech",
+    "Business",
+    "Coding",
+    "Communications",
+    "Content",
+    "Cybersecurity",
+    "Data Analysis",
+    "Data Analytics",
+    "Data Science",
+    "Design",
+    "Digital Media",
+    "Electronics",
+    "Engineering",
+    "Finance",
+    "Gaming",
+    "Healthcare",
+    "Innovation",
+    "Language",
+    "Linguistics",
+    "Management",
+    "Marketing",
+    "Media",
+    "Mobile Apps",
+    "Research",
+    "Security",
+    "Social Media",
+    "Software Development",
+    "Software Engineering",
+    "Statistics",
+    "Technology",
+    "User Experience",
+    "Web Design",
+    "Web Development"
+  ],
+  "career_classes": [
+    "AI Researcher",
+    "AI Specialist",
+    "Automation Engineer",
+    "Backend Developer",
+    "Biostatistician",
+    "Business Analyst",
+    "Cloud Engineer",
+    "Content Strategist",
+    "Cybersecurity Analyst",
+    "Cybersecurity Specialist",
+    "Data Analyst",
+    "Data Engineer",
+    "Data Scientist",
+    "Deep Learning Engineer",
+    "DevOps Engineer",
+    "Digital Marketer",
+    "Embedded Systems Engineer",
+    "Financial Analyst",
+    "Front-end Developer",
+    "Full Stack Developer",
+    "Graphic Designer",
+    "Machine Learning Engineer",
+    "Marketing Manager",
+    "Mobile Developer",
+    "NLP Engineer",
+    "Project Manager",
+    "Research Analyst",
+    "Research Scientist",
+    "Software Developer",
+    "Software Engineer",
+    "UX Designer",
+    "UX Researcher"
+  ],
+  "career_catalog": {
+    "AI Researcher": {
+      "name": "AI Researcher",
+      "sample_count": 4,
+      "avg_age": 27.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 2,
+        "Master's": 2
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "Python",
+        "Deep Learning",
+        "Statistics",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "Algorithms",
+        "Data Structures"
+      ],
+      "top_skills": [
+        "Python",
+        "Deep Learning",
+        "Statistics",
+        "HTML",
+        "CSS"
+      ],
+      "top_interests": [
+        "Healthcare",
+        "AI"
+      ]
+    },
+    "AI Specialist": {
+      "name": "AI Specialist",
+      "sample_count": 4,
+      "avg_age": 31.5,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.92,
+      "required_skills": [
+        "Data Science",
+        "Machine Learning",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "Algorithms",
+        "Data Structures"
+      ],
+      "top_skills": [
+        "Data Science",
+        "Machine Learning",
+        "Python",
+        "HTML",
+        "CSS"
+      ],
+      "top_interests": [
+        "Healthcare",
+        "AI"
+      ]
+    },
+    "Automation Engineer": {
+      "name": "Automation Engineer",
+      "sample_count": 4,
+      "avg_age": 32.0,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 3,
+        "PhD": 1
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "Python",
+        "Automation",
+        "Data Analysis",
+        "Data Visualization",
+        "R",
+        "Project Management",
+        "Agile",
+        "Communication"
+      ],
+      "top_skills": [
+        "Python",
+        "Automation",
+        "Data Analysis",
+        "Data Visualization",
+        "R"
+      ],
+      "top_interests": [
+        "Technology",
+        "Engineering",
+        "Academia",
+        "Research"
+      ]
+    },
+    "Backend Developer": {
+      "name": "Backend Developer",
+      "sample_count": 4,
+      "avg_age": 25.8,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 2
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Java",
+        "Spring",
+        "Microservices",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics",
+        "Python",
+        "Data Analysis",
+        "Machine Learning"
+      ],
+      "top_skills": [
+        "Java",
+        "Spring",
+        "Microservices",
+        "Financial Analysis",
+        "Excel"
+      ],
+      "top_interests": [
+        "Technology",
+        "Software Engineering",
+        "Data Science",
+        "Finance"
+      ]
+    },
+    "Biostatistician": {
+      "name": "Biostatistician",
+      "sample_count": 4,
+      "avg_age": 29.0,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "Machine Learning",
+        "R",
+        "Cloud Computing",
+        "DevOps",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite"
+      ],
+      "top_skills": [
+        "Python",
+        "Machine Learning",
+        "R",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "top_interests": [
+        "Biotech",
+        "Data Science",
+        "Arts",
+        "Digital Media"
+      ]
+    },
+    "Business Analyst": {
+      "name": "Business Analyst",
+      "sample_count": 7,
+      "avg_age": 29.7,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 3,
+        "Master's": 2,
+        "PhD": 2
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "SQL",
+        "Business Analysis",
+        "Excel",
+        "Python",
+        "Data Warehousing",
+        "R",
+        "Deep Learning",
+        "Statistics",
+        "C#",
+        ".NET",
+        "Software Design",
+        "Machine Learning",
+        "Big Data",
+        "Digital Marketing",
+        "SEO",
+        "Content Creation"
+      ],
+      "top_skills": [
+        "SQL",
+        "Business Analysis",
+        "Excel",
+        "Python",
+        "Data Warehousing"
+      ],
+      "top_interests": [
+        "Business",
+        "Finance",
+        "Web Development",
+        "Design"
+      ]
+    },
+    "Cloud Engineer": {
+      "name": "Cloud Engineer",
+      "sample_count": 4,
+      "avg_age": 34.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 2
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "Project Management",
+        "Agile",
+        "Communication",
+        "Data Visualization",
+        "R"
+      ],
+      "top_skills": [
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "Project Management",
+        "Agile"
+      ],
+      "top_interests": [
+        "Technology",
+        "Business",
+        "Academia",
+        "Research"
+      ]
+    },
+    "Content Strategist": {
+      "name": "Content Strategist",
+      "sample_count": 8,
+      "avg_age": 29.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 5,
+        "PhD": 2,
+        "Master's": 1
+      },
+      "avg_score": 0.88,
+      "required_skills": [
+        "SEO",
+        "Copywriting",
+        "Social Media",
+        "Content Writing",
+        "Storytelling",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL",
+        "Data Warehousing",
+        "ETL",
+        "Java",
+        "Algorithms",
+        "Data Structures"
+      ],
+      "top_skills": [
+        "SEO",
+        "Copywriting",
+        "Social Media",
+        "Content Writing",
+        "Storytelling"
+      ],
+      "top_interests": [
+        "Marketing",
+        "Content",
+        "Media",
+        "Finance"
+      ]
+    },
+    "Cybersecurity Analyst": {
+      "name": "Cybersecurity Analyst",
+      "sample_count": 4,
+      "avg_age": 33.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 3,
+        "Master's": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Network Security",
+        "Linux",
+        "Python",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "UX Research",
+        "Prototyping",
+        "Interaction Design"
+      ],
+      "top_skills": [
+        "Network Security",
+        "Linux",
+        "Python",
+        "C++",
+        "Embedded Systems"
+      ],
+      "top_interests": [
+        "Cybersecurity",
+        "Technology",
+        "Business",
+        "Management"
+      ]
+    },
+    "Cybersecurity Specialist": {
+      "name": "Cybersecurity Specialist",
+      "sample_count": 3,
+      "avg_age": 32.7,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 1,
+        "PhD": 1,
+        "Master's": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "Network Security",
+        "Cybersecurity",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Linux"
+      ],
+      "top_skills": [
+        "Python",
+        "Network Security",
+        "Cybersecurity",
+        "JavaScript",
+        "React"
+      ],
+      "top_interests": [
+        "Marketing",
+        "Communications",
+        "Technology",
+        "Security"
+      ]
+    },
+    "Data Analyst": {
+      "name": "Data Analyst",
+      "sample_count": 21,
+      "avg_age": 30.8,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Master's": 9,
+        "Bachelor's": 9,
+        "PhD": 3
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "Python",
+        "SQL",
+        "Data Analysis",
+        "JavaScript",
+        "Data Warehousing",
+        "ETL",
+        "Data Visualization",
+        "Excel",
+        "R",
+        "React",
+        "Node.js",
+        "Network Security",
+        "Linux",
+        "Java",
+        "Algorithms",
+        "Data Structures",
+        "Machine Learning",
+        "Digital Marketing",
+        "SEO",
+        "Content Creation",
+        "HTML",
+        "CSS",
+        "Financial Analysis",
+        "Econometrics",
+        "C#",
+        ".NET",
+        "Software Design"
+      ],
+      "top_skills": [
+        "Python",
+        "SQL",
+        "Data Analysis",
+        "JavaScript",
+        "Data Warehousing"
+      ],
+      "top_interests": [
+        "Analytics",
+        "Finance",
+        "Marketing",
+        "Communications"
+      ]
+    },
+    "Data Engineer": {
+      "name": "Data Engineer",
+      "sample_count": 4,
+      "avg_age": 33.0,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 3,
+        "PhD": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "Big Data",
+        "Machine Learning",
+        "UX Research",
+        "Prototyping",
+        "Interaction Design",
+        "C++",
+        "Embedded Systems",
+        "IoT"
+      ],
+      "top_skills": [
+        "Python",
+        "Big Data",
+        "Machine Learning",
+        "UX Research",
+        "Prototyping"
+      ],
+      "top_interests": [
+        "Finance",
+        "Technology",
+        "Business",
+        "Management"
+      ]
+    },
+    "Data Scientist": {
+      "name": "Data Scientist",
+      "sample_count": 7,
+      "avg_age": 28.7,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 4,
+        "Master's": 2,
+        "PhD": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "Data Analysis",
+        "Machine Learning",
+        "Data Mining",
+        "Statistics",
+        "Network Security",
+        "Linux",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "top_skills": [
+        "Python",
+        "Data Analysis",
+        "Machine Learning",
+        "Data Mining",
+        "Statistics"
+      ],
+      "top_interests": [
+        "Data Science",
+        "Technology",
+        "Finance",
+        "Marketing"
+      ]
+    },
+    "Deep Learning Engineer": {
+      "name": "Deep Learning Engineer",
+      "sample_count": 3,
+      "avg_age": 34.3,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 2,
+        "PhD": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "TensorFlow",
+        "Deep Learning",
+        "Project Management",
+        "Agile",
+        "Communication",
+        "Data Visualization",
+        "R"
+      ],
+      "top_skills": [
+        "Python",
+        "TensorFlow",
+        "Deep Learning",
+        "Project Management",
+        "Agile"
+      ],
+      "top_interests": [
+        "Research",
+        "Academia",
+        "Technology"
+      ]
+    },
+    "DevOps Engineer": {
+      "name": "DevOps Engineer",
+      "sample_count": 4,
+      "avg_age": 33.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 2,
+        "Master's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Network Security",
+        "Linux"
+      ],
+      "top_skills": [
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "JavaScript",
+        "React"
+      ],
+      "top_interests": [
+        "Technology",
+        "Business",
+        "Marketing",
+        "Communications"
+      ]
+    },
+    "Digital Marketer": {
+      "name": "Digital Marketer",
+      "sample_count": 12,
+      "avg_age": 30.3,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 6,
+        "Master's": 4,
+        "PhD": 2
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "SEO",
+        "Digital Marketing",
+        "Content Creation",
+        "Social Media",
+        "Analytics",
+        "Content Writing",
+        "Content Strategy",
+        "Copywriting",
+        "Java",
+        "System Design",
+        "Cloud Computing",
+        "C#",
+        ".NET",
+        "Software Design",
+        "SQL",
+        "Data Warehousing",
+        "ETL",
+        "Research",
+        "Statistical Analysis",
+        "Python"
+      ],
+      "top_skills": [
+        "SEO",
+        "Digital Marketing",
+        "Content Creation",
+        "Social Media",
+        "Analytics"
+      ],
+      "top_interests": [
+        "Marketing",
+        "Communications",
+        "Social Media",
+        "Business"
+      ]
+    },
+    "Embedded Systems Engineer": {
+      "name": "Embedded Systems Engineer",
+      "sample_count": 5,
+      "avg_age": 29.4,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 4,
+        "PhD": 1
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "SQL",
+        "Data Warehousing",
+        "ETL",
+        "Copywriting",
+        "SEO",
+        "Social Media"
+      ],
+      "top_skills": [
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "SQL",
+        "Data Warehousing"
+      ],
+      "top_interests": [
+        "Electronics",
+        "Automation",
+        "Finance",
+        "Analytics"
+      ]
+    },
+    "Financial Analyst": {
+      "name": "Financial Analyst",
+      "sample_count": 8,
+      "avg_age": 29.5,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 6,
+        "Bachelor's": 2
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "Python",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics",
+        "Data Analysis",
+        "R",
+        "Deep Learning",
+        "Statistics",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite",
+        "Machine Learning",
+        "Big Data",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "top_skills": [
+        "Python",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics",
+        "Data Analysis"
+      ],
+      "top_interests": [
+        "Finance",
+        "Data Analysis",
+        "Web Development",
+        "Design"
+      ]
+    },
+    "Front-end Developer": {
+      "name": "Front-end Developer",
+      "sample_count": 10,
+      "avg_age": 26.9,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 7,
+        "PhD": 2,
+        "Master's": 1
+      },
+      "avg_score": 0.87,
+      "required_skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "UX",
+        "Research",
+        "Statistical Analysis",
+        "Python",
+        "Java",
+        "System Design",
+        "Cloud Computing"
+      ],
+      "top_skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "UX",
+        "Research"
+      ],
+      "top_interests": [
+        "Web Development",
+        "Design",
+        "Software Development",
+        "AI"
+      ]
+    },
+    "Full Stack Developer": {
+      "name": "Full Stack Developer",
+      "sample_count": 4,
+      "avg_age": 28.8,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 2,
+        "PhD": 1,
+        "Master's": 1
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite",
+        "Cloud Computing",
+        "DevOps",
+        "Python"
+      ],
+      "top_skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Graphic Design",
+        "UI/UX"
+      ],
+      "top_interests": [
+        "Web Development",
+        "Technology",
+        "Arts",
+        "Digital Media"
+      ]
+    },
+    "Graphic Designer": {
+      "name": "Graphic Designer",
+      "sample_count": 12,
+      "avg_age": 29.0,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 8,
+        "Master's": 3,
+        "PhD": 1
+      },
+      "avg_score": 0.88,
+      "required_skills": [
+        "Graphic Design",
+        "Adobe Illustrator",
+        "Illustration",
+        "Content Creation",
+        "Digital Illustration",
+        "Creativity",
+        "Adobe Creative Suite",
+        "Python",
+        "Adobe Photoshop",
+        "Digital Marketing",
+        "SEO",
+        "Java",
+        "Algorithms",
+        "Data Structures",
+        "Deep Learning",
+        "Statistics",
+        "C#",
+        ".NET",
+        "Software Design",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Machine Learning",
+        "Big Data"
+      ],
+      "top_skills": [
+        "Graphic Design",
+        "Adobe Illustrator",
+        "Illustration",
+        "Content Creation",
+        "Digital Illustration"
+      ],
+      "top_interests": [
+        "Design",
+        "Arts",
+        "Cybersecurity",
+        "Technology"
+      ]
+    },
+    "Machine Learning Engineer": {
+      "name": "Machine Learning Engineer",
+      "sample_count": 8,
+      "avg_age": 30.6,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 5,
+        "PhD": 2,
+        "Bachelor's": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Machine Learning",
+        "Python",
+        "AI",
+        "Big Data",
+        "TensorFlow",
+        "UX Research",
+        "Prototyping",
+        "Interaction Design",
+        "Data Analysis",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics"
+      ],
+      "top_skills": [
+        "Machine Learning",
+        "Python",
+        "AI",
+        "Big Data",
+        "TensorFlow"
+      ],
+      "top_interests": [
+        "Technology",
+        "Innovation",
+        "Business",
+        "Management"
+      ]
+    },
+    "Marketing Manager": {
+      "name": "Marketing Manager",
+      "sample_count": 4,
+      "avg_age": 28.2,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 3,
+        "Bachelor's": 1
+      },
+      "avg_score": 0.9,
+      "required_skills": [
+        "Marketing Strategy",
+        "Digital Marketing",
+        "CRM",
+        "Java",
+        "System Design",
+        "Cloud Computing",
+        "Research",
+        "Statistical Analysis",
+        "Python"
+      ],
+      "top_skills": [
+        "Marketing Strategy",
+        "Digital Marketing",
+        "CRM",
+        "Java",
+        "System Design"
+      ],
+      "top_interests": [
+        "Marketing",
+        "Business",
+        "Software Development",
+        "AI"
+      ]
+    },
+    "Mobile Developer": {
+      "name": "Mobile Developer",
+      "sample_count": 4,
+      "avg_age": 31.5,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 3,
+        "PhD": 1
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "Java",
+        "Android",
+        "UI Design",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "UX Research",
+        "Prototyping",
+        "Interaction Design"
+      ],
+      "top_skills": [
+        "Java",
+        "Android",
+        "UI Design",
+        "C++",
+        "Embedded Systems"
+      ],
+      "top_interests": [
+        "Mobile Apps",
+        "Technology",
+        "Business",
+        "Management"
+      ]
+    },
+    "NLP Engineer": {
+      "name": "NLP Engineer",
+      "sample_count": 5,
+      "avg_age": 32.8,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 3,
+        "Master's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.92,
+      "required_skills": [
+        "Python",
+        "Natural Language Processing",
+        "Machine Learning",
+        "NLP",
+        "Deep Learning",
+        "Project Management",
+        "Agile",
+        "Communication",
+        "Data Visualization",
+        "R"
+      ],
+      "top_skills": [
+        "Python",
+        "Natural Language Processing",
+        "Machine Learning",
+        "NLP",
+        "Deep Learning"
+      ],
+      "top_interests": [
+        "Linguistics",
+        "Technology",
+        "Academia",
+        "Research"
+      ]
+    },
+    "Project Manager": {
+      "name": "Project Manager",
+      "sample_count": 8,
+      "avg_age": 32.4,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 5,
+        "Bachelor's": 2,
+        "PhD": 1
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "Project Management",
+        "Communication",
+        "Agile",
+        "Risk Analysis",
+        "Negotiation",
+        "C++",
+        "Embedded Systems",
+        "IoT",
+        "Data Visualization",
+        "Python",
+        "R",
+        "UX Research",
+        "Prototyping",
+        "Interaction Design"
+      ],
+      "top_skills": [
+        "Project Management",
+        "Communication",
+        "Agile",
+        "Risk Analysis",
+        "Negotiation"
+      ],
+      "top_interests": [
+        "Business",
+        "Management",
+        "Academia",
+        "Research"
+      ]
+    },
+    "Research Analyst": {
+      "name": "Research Analyst",
+      "sample_count": 4,
+      "avg_age": 31.0,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 3,
+        "PhD": 1
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "Python",
+        "Statistics",
+        "Data Mining",
+        "SQL",
+        "Data Warehousing",
+        "ETL",
+        "Copywriting",
+        "SEO",
+        "Social Media"
+      ],
+      "top_skills": [
+        "Python",
+        "Statistics",
+        "Data Mining",
+        "SQL",
+        "Data Warehousing"
+      ],
+      "top_interests": [
+        "Academia",
+        "Research",
+        "Finance",
+        "Analytics"
+      ]
+    },
+    "Research Scientist": {
+      "name": "Research Scientist",
+      "sample_count": 6,
+      "avg_age": 33.0,
+      "common_education": "PhD",
+      "education_distribution": {
+        "PhD": 4,
+        "Bachelor's": 1,
+        "Master's": 1
+      },
+      "avg_score": 0.92,
+      "required_skills": [
+        "Research",
+        "Statistical Analysis",
+        "Python",
+        "R",
+        "Financial Analysis",
+        "Excel",
+        "Econometrics",
+        "Data Analysis",
+        "Machine Learning"
+      ],
+      "top_skills": [
+        "Research",
+        "Statistical Analysis",
+        "Python",
+        "R",
+        "Financial Analysis"
+      ],
+      "top_interests": [
+        "Academia",
+        "Biotech",
+        "Technology",
+        "Data Science"
+      ]
+    },
+    "Software Developer": {
+      "name": "Software Developer",
+      "sample_count": 8,
+      "avg_age": 30.2,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 6,
+        "Master's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.89,
+      "required_skills": [
+        "C#",
+        ".NET",
+        "Software Design",
+        "Java",
+        "Algorithms",
+        "Data Structures",
+        "Cloud Computing",
+        "DevOps",
+        "Python",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite",
+        "Digital Marketing",
+        "SEO",
+        "Content Creation"
+      ],
+      "top_skills": [
+        "C#",
+        ".NET",
+        "Software Design",
+        "Java",
+        "Algorithms"
+      ],
+      "top_interests": [
+        "Technology",
+        "Coding",
+        "Gaming",
+        "Arts"
+      ]
+    },
+    "Software Engineer": {
+      "name": "Software Engineer",
+      "sample_count": 4,
+      "avg_age": 27.0,
+      "common_education": "Master's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 1,
+        "PhD": 1
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Java",
+        "System Design",
+        "Cloud Computing",
+        "Research",
+        "Statistical Analysis",
+        "Python"
+      ],
+      "top_skills": [
+        "Java",
+        "System Design",
+        "Cloud Computing",
+        "Research",
+        "Statistical Analysis"
+      ],
+      "top_interests": [
+        "Software Development",
+        "AI"
+      ]
+    },
+    "UX Designer": {
+      "name": "UX Designer",
+      "sample_count": 9,
+      "avg_age": 26.0,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Bachelor's": 5,
+        "PhD": 2,
+        "Master's": 2
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "Python",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite",
+        "Machine Learning",
+        "Big Data",
+        "Deep Learning",
+        "Statistics",
+        "User Research",
+        "UX Design",
+        "Prototyping",
+        "UX/UI",
+        "Adobe XD",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "top_skills": [
+        "Python",
+        "Graphic Design",
+        "UI/UX",
+        "Adobe Creative Suite",
+        "Machine Learning"
+      ],
+      "top_interests": [
+        "Design",
+        "Digital Media",
+        "Web Development",
+        "Arts"
+      ]
+    },
+    "UX Researcher": {
+      "name": "UX Researcher",
+      "sample_count": 4,
+      "avg_age": 30.0,
+      "common_education": "Bachelor's",
+      "education_distribution": {
+        "Master's": 2,
+        "Bachelor's": 2
+      },
+      "avg_score": 0.91,
+      "required_skills": [
+        "UX Research",
+        "Prototyping",
+        "Interaction Design",
+        "SQL",
+        "Data Warehousing",
+        "ETL",
+        "Copywriting",
+        "SEO",
+        "Social Media"
+      ],
+      "top_skills": [
+        "UX Research",
+        "Prototyping",
+        "Interaction Design",
+        "SQL",
+        "Data Warehousing"
+      ],
+      "top_interests": [
+        "Design",
+        "User Experience",
+        "Finance",
+        "Analytics"
+      ]
+    }
+  },
+  "metrics": {
+    "top1_acc": 47.5,
+    "top3_acc": 55.0,
+    "top5_acc": 62.5,
+    "total_samples": 200,
+    "total_careers": 32,
+    "test_size": 40
+  }
+}
